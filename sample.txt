@@ -1,0 +1,12 @@
+-hots: webservers
+ become: true
+ task:
+  - name: install git on the host server
+    yum: name=git state=present
+  -name : insatll docker on server
+    yum: name=docker state=present
+   -name :start the docker
+    service: name:docker state=started
+    -name: clne the reposistory on the slave
+     git: repo=
+    -name: run  
